@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabla de Datos</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">UNIAJC</a>
+    <nav class="navbar">
+        <p>Desarrollo de Aplicaciones Web</p>
+    </nav>
+</header>
+
+<div class="title">
+<h1>Listado de Productos</h1>
+</div>
+
+<div class="add-bnt">
+  <button type="button" class="btn btn-primary" id="agregarEnvaseBtn">Agregar Envase</button><br><br>
+  </div>
+
+<aside class="aside">
+  <div class="container">
+        <div class="filters">
+          <div class="filter-box">
+          <h2>Filtros</h2>
+          <div class="filter-option">
+            <label for="categoriaFilter">Categoría:</label>
+            <select id="categoriaFilter">
+              <option value="">Todas</option>
+              <!-- Aquí se generan las opciones de categoría dinámicamente -->
+            </select>
+            <span id="categoriaIndicator"></span>
+          </div>
+          <div class="filter-option">
+            <label for="proveedorFilter">Proveedor:</label>
+            <select id="proveedorFilter">
+              <option value="">Todos</option>
+              <!-- Aquí se generan las opciones de proveedor dinámicamente -->
+            </select><br><br>
+            <span id="proveedorIndicator"></span>
+          </div>
+          <div class="filter-buttons">
+            <button type="button" class="btn btn-info" onclick="applyFilters()">Aplicar Filtros</button><br><br>
+            <button type="button" class="btn btn-info" onclick="clearFilters()">Limpiar Filtros</button>
+          </div>
+          </div>
+        </div>
+      </div>
+</aside>          
+<br>
+<div class="data-table">
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th style="width: 8%;">SKU</th>
+        <th style="width: 15%;">Categoría</th>
+        <th>Nombre</th>
+        <th style="width: 13%;">Material</th>
+        <th style="width: 13%;">Proveedor</th>
+        <th style="width: 18%;">Opciones</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      <!-- Aquí se insertarán los datos dinámicamente -->
+    </tbody>
+  </table>
+
+  <div class="modal" id="confirmModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Eliminar Producto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body" id="confirmText">
+                <p id="confirmText"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="confirmDelete()">Confirmar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="cerrarModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <div class="pagination">
+    <button type="button" class="btn btn-info" id="previousBtn">Anterior</button>
+    <span id="page-num"></span>
+    <button  type="button" class="btn btn-info" id="nextBtn">Siguiente</button>
+  </div>
+</div>
+
+  <script src="./formulario.js"></script>
+  <script src="./scriptrefacto.js"></script>  
+  <script src="./detalle.js"></script>
+
+  
+</body>
+</html>

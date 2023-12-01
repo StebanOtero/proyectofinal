@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Envase</title>
+  <link rel="stylesheet" href="./formularioStyles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">UNIAJC</a>
+
+    <nav class="navbar">
+        <p>Desarrollo de Aplicaciones Web</p>
+    </nav>
+</header>
+
+<section class="container">
+  <header>Agregar Nuevo Envase</header>
+
+  <form action="#" class="form" id="envaseForm">
+    <div class="input-box">
+      <label for="sku">SKU</label>
+      <input type="number" id="sku" name="sku" placeholder="Digite Sku" required>
+    </div>
+
+    <div class="input-box">
+      <label for="categoria">Categoría</label>
+      <input type="text" id="categoria" name="categoria" placeholder="Digite categoria" required>
+    </div>    
+
+    <div class="input-box">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Digite nombre" required>
+    </div>
+    
+    <div class="input-box">
+        <label for="nombre">Material</label>
+        <input type="text" id="material" name="material" placeholder="Digite material" required>
+    </div>
+
+    <div class="column">
+      <div class="input-box">
+          <label for="nombre">Capacidad</label>
+          <input type="text" id="capacidad" name="capacidad" placeholder="Digite capacidad" required>
+      </div>
+
+      <div class="input-box">
+          <label for="nombre">Cuello</label>
+          <input type="text" id="cuello" name="cuello" placeholder="Digite cuello" required>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="input-box">
+          <label for="nombre">Lote</label>
+          <input type="text" id="lote" name="lote" placeholder="Digite lote" required>
+      </div>
+
+      <div class="input-box">
+          <label for="nombre">Cantidad</label>
+          <input type="number" id="cantidad" name="cantidad" placeholder="Digite cantidad" required>
+      </div>
+    </div>
+
+    <div class="input-box">
+        <label for="nombre">Proveedor</label>
+        <input type="text" id="proveedor" name="proveedor" placeholder="Digite proveedor" required>
+    </div>
+
+    <div class="input-box">
+        <label for="nombre">color</label>
+        <input type="text" id="color" name="color" placeholder="Digite color" required>
+    </div>
+
+    
+      <button type="submit" onclick="submitInfo()">Registrar</button>
+      <button type="button" id="limpiarBtn" onclick="limpiarCampos()">Limpiar</button>
+
+       
+</form>
+  <p id="mensaje"></p>     
+</section>
+
+<script src="./scriptrefacto.js"></script>
+</body>
+</html>
